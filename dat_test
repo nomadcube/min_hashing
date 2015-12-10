@@ -1,0 +1,4 @@
+The sstream header defines three types to suppor
+The sstream header defines three types to suppor from
+The istringstream type reads a string, ostringstream writes a string, and
+stringstream reads and writes the string. Like the fstream types, the types defined
