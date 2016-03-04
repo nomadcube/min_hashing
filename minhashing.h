@@ -1,22 +1,31 @@
-#include <set>
+#ifndef MINHASHING_H
+#define MINHASHING_H
+
 #include <map>
 #include <string>
-#include <random>
 #include <vector>
+#include <set>
+
+#include <algorithm>
+
+#include <functional>
+#include <iostream>
+#include <random>
 #include <fstream>
 #include <sstream>
 
-
-typedef std::set<std::string> t_set;
-typedef std::vector<t_set> t_all_set;
-typedef std::map<std::string, int> t_hash_map;
-
-typedef std::vector<std::string> t_sig_row;
-typedef std::vector<t_sig_row> t_sig_matrix;
+typedef std::vector<std::string> doc;
+typedef std::vector<std::vector<std::string> > all_doc;
+typedef std::set<std::string> doc_set;
 
 
-t_hash_map construce_hash(t_set);
-std::string min_hash(t_set, t_hash_map);
-t_sig_matrix generate_sig(t_all_set, t_set, int);
+all_doc read(std::string);
 
-t_all_set read(std::string);
+int hash_func(std::string, int);
+
+std::string min_hashing(doc, int);
+all_doc get_signature(all_doc, int);
+
+float jaccard_similarity(all_doc);
+float jaccard_similarity(doc, doc);
+#endif /* MINHASHING_H */

@@ -154,568 +154,344 @@ class SwigPyIterator(_object):
 SwigPyIterator_swigregister = _minhashing.SwigPyIterator_swigregister
 SwigPyIterator_swigregister(SwigPyIterator)
 
-class t_set(_object):
+class doc(_object):
     __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, t_set, name, value)
+    __setattr__ = lambda self, name, value: _swig_setattr(self, doc, name, value)
     __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, t_set, name)
+    __getattr__ = lambda self, name: _swig_getattr(self, doc, name)
     __repr__ = _swig_repr
 
     def iterator(self):
-        return _minhashing.t_set_iterator(self)
+        return _minhashing.doc_iterator(self)
     def __iter__(self):
         return self.iterator()
 
     def __nonzero__(self):
-        return _minhashing.t_set___nonzero__(self)
+        return _minhashing.doc___nonzero__(self)
 
     def __bool__(self):
-        return _minhashing.t_set___bool__(self)
+        return _minhashing.doc___bool__(self)
 
     def __len__(self):
-        return _minhashing.t_set___len__(self)
+        return _minhashing.doc___len__(self)
+
+    def pop(self):
+        return _minhashing.doc_pop(self)
+
+    def __getslice__(self, i, j):
+        return _minhashing.doc___getslice__(self, i, j)
+
+    def __setslice__(self, *args):
+        return _minhashing.doc___setslice__(self, *args)
+
+    def __delslice__(self, i, j):
+        return _minhashing.doc___delslice__(self, i, j)
+
+    def __delitem__(self, *args):
+        return _minhashing.doc___delitem__(self, *args)
+
+    def __getitem__(self, *args):
+        return _minhashing.doc___getitem__(self, *args)
+
+    def __setitem__(self, *args):
+        return _minhashing.doc___setitem__(self, *args)
 
     def append(self, x):
-        return _minhashing.t_set_append(self, x)
+        return _minhashing.doc_append(self, x)
+
+    def empty(self):
+        return _minhashing.doc_empty(self)
+
+    def size(self):
+        return _minhashing.doc_size(self)
+
+    def clear(self):
+        return _minhashing.doc_clear(self)
+
+    def swap(self, v):
+        return _minhashing.doc_swap(self, v)
+
+    def get_allocator(self):
+        return _minhashing.doc_get_allocator(self)
+
+    def begin(self):
+        return _minhashing.doc_begin(self)
+
+    def end(self):
+        return _minhashing.doc_end(self)
+
+    def rbegin(self):
+        return _minhashing.doc_rbegin(self)
+
+    def rend(self):
+        return _minhashing.doc_rend(self)
+
+    def pop_back(self):
+        return _minhashing.doc_pop_back(self)
+
+    def erase(self, *args):
+        return _minhashing.doc_erase(self, *args)
+
+    def __init__(self, *args):
+        this = _minhashing.new_doc(*args)
+        try:
+            self.this.append(this)
+        except:
+            self.this = this
+
+    def push_back(self, x):
+        return _minhashing.doc_push_back(self, x)
+
+    def front(self):
+        return _minhashing.doc_front(self)
+
+    def back(self):
+        return _minhashing.doc_back(self)
+
+    def assign(self, n, x):
+        return _minhashing.doc_assign(self, n, x)
+
+    def resize(self, *args):
+        return _minhashing.doc_resize(self, *args)
+
+    def insert(self, *args):
+        return _minhashing.doc_insert(self, *args)
+
+    def reserve(self, n):
+        return _minhashing.doc_reserve(self, n)
+
+    def capacity(self):
+        return _minhashing.doc_capacity(self)
+    __swig_destroy__ = _minhashing.delete_doc
+    __del__ = lambda self: None
+doc_swigregister = _minhashing.doc_swigregister
+doc_swigregister(doc)
+
+class all_doc(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, all_doc, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, all_doc, name)
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        return _minhashing.all_doc_iterator(self)
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        return _minhashing.all_doc___nonzero__(self)
+
+    def __bool__(self):
+        return _minhashing.all_doc___bool__(self)
+
+    def __len__(self):
+        return _minhashing.all_doc___len__(self)
+
+    def pop(self):
+        return _minhashing.all_doc_pop(self)
+
+    def __getslice__(self, i, j):
+        return _minhashing.all_doc___getslice__(self, i, j)
+
+    def __setslice__(self, *args):
+        return _minhashing.all_doc___setslice__(self, *args)
+
+    def __delslice__(self, i, j):
+        return _minhashing.all_doc___delslice__(self, i, j)
+
+    def __delitem__(self, *args):
+        return _minhashing.all_doc___delitem__(self, *args)
+
+    def __getitem__(self, *args):
+        return _minhashing.all_doc___getitem__(self, *args)
+
+    def __setitem__(self, *args):
+        return _minhashing.all_doc___setitem__(self, *args)
+
+    def append(self, x):
+        return _minhashing.all_doc_append(self, x)
+
+    def empty(self):
+        return _minhashing.all_doc_empty(self)
+
+    def size(self):
+        return _minhashing.all_doc_size(self)
+
+    def clear(self):
+        return _minhashing.all_doc_clear(self)
+
+    def swap(self, v):
+        return _minhashing.all_doc_swap(self, v)
+
+    def get_allocator(self):
+        return _minhashing.all_doc_get_allocator(self)
+
+    def begin(self):
+        return _minhashing.all_doc_begin(self)
+
+    def end(self):
+        return _minhashing.all_doc_end(self)
+
+    def rbegin(self):
+        return _minhashing.all_doc_rbegin(self)
+
+    def rend(self):
+        return _minhashing.all_doc_rend(self)
+
+    def pop_back(self):
+        return _minhashing.all_doc_pop_back(self)
+
+    def erase(self, *args):
+        return _minhashing.all_doc_erase(self, *args)
+
+    def __init__(self, *args):
+        this = _minhashing.new_all_doc(*args)
+        try:
+            self.this.append(this)
+        except:
+            self.this = this
+
+    def push_back(self, x):
+        return _minhashing.all_doc_push_back(self, x)
+
+    def front(self):
+        return _minhashing.all_doc_front(self)
+
+    def back(self):
+        return _minhashing.all_doc_back(self)
+
+    def assign(self, n, x):
+        return _minhashing.all_doc_assign(self, n, x)
+
+    def resize(self, *args):
+        return _minhashing.all_doc_resize(self, *args)
+
+    def insert(self, *args):
+        return _minhashing.all_doc_insert(self, *args)
+
+    def reserve(self, n):
+        return _minhashing.all_doc_reserve(self, n)
+
+    def capacity(self):
+        return _minhashing.all_doc_capacity(self)
+    __swig_destroy__ = _minhashing.delete_all_doc
+    __del__ = lambda self: None
+all_doc_swigregister = _minhashing.all_doc_swigregister
+all_doc_swigregister(all_doc)
+
+class doc_set(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, doc_set, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, doc_set, name)
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        return _minhashing.doc_set_iterator(self)
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        return _minhashing.doc_set___nonzero__(self)
+
+    def __bool__(self):
+        return _minhashing.doc_set___bool__(self)
+
+    def __len__(self):
+        return _minhashing.doc_set___len__(self)
+
+    def append(self, x):
+        return _minhashing.doc_set_append(self, x)
 
     def __contains__(self, x):
-        return _minhashing.t_set___contains__(self, x)
+        return _minhashing.doc_set___contains__(self, x)
 
     def __getitem__(self, i):
-        return _minhashing.t_set___getitem__(self, i)
+        return _minhashing.doc_set___getitem__(self, i)
 
     def add(self, x):
-        return _minhashing.t_set_add(self, x)
+        return _minhashing.doc_set_add(self, x)
 
     def discard(self, x):
-        return _minhashing.t_set_discard(self, x)
+        return _minhashing.doc_set_discard(self, x)
 
     def __init__(self, *args):
-        this = _minhashing.new_t_set(*args)
+        this = _minhashing.new_doc_set(*args)
         try:
             self.this.append(this)
         except:
             self.this = this
 
     def empty(self):
-        return _minhashing.t_set_empty(self)
+        return _minhashing.doc_set_empty(self)
 
     def size(self):
-        return _minhashing.t_set_size(self)
+        return _minhashing.doc_set_size(self)
 
     def clear(self):
-        return _minhashing.t_set_clear(self)
+        return _minhashing.doc_set_clear(self)
 
     def swap(self, v):
-        return _minhashing.t_set_swap(self, v)
+        return _minhashing.doc_set_swap(self, v)
 
     def count(self, x):
-        return _minhashing.t_set_count(self, x)
+        return _minhashing.doc_set_count(self, x)
 
     def begin(self):
-        return _minhashing.t_set_begin(self)
+        return _minhashing.doc_set_begin(self)
 
     def end(self):
-        return _minhashing.t_set_end(self)
+        return _minhashing.doc_set_end(self)
 
     def rbegin(self):
-        return _minhashing.t_set_rbegin(self)
+        return _minhashing.doc_set_rbegin(self)
 
     def rend(self):
-        return _minhashing.t_set_rend(self)
+        return _minhashing.doc_set_rend(self)
 
     def erase(self, *args):
-        return _minhashing.t_set_erase(self, *args)
+        return _minhashing.doc_set_erase(self, *args)
 
     def find(self, x):
-        return _minhashing.t_set_find(self, x)
+        return _minhashing.doc_set_find(self, x)
 
     def lower_bound(self, x):
-        return _minhashing.t_set_lower_bound(self, x)
+        return _minhashing.doc_set_lower_bound(self, x)
 
     def upper_bound(self, x):
-        return _minhashing.t_set_upper_bound(self, x)
+        return _minhashing.doc_set_upper_bound(self, x)
 
     def equal_range(self, x):
-        return _minhashing.t_set_equal_range(self, x)
+        return _minhashing.doc_set_equal_range(self, x)
 
     def insert(self, __x):
-        return _minhashing.t_set_insert(self, __x)
-    __swig_destroy__ = _minhashing.delete_t_set
+        return _minhashing.doc_set_insert(self, __x)
+    __swig_destroy__ = _minhashing.delete_doc_set
     __del__ = lambda self: None
-t_set_swigregister = _minhashing.t_set_swigregister
-t_set_swigregister(t_set)
+doc_set_swigregister = _minhashing.doc_set_swigregister
+doc_set_swigregister(doc_set)
 
-class t_all_set(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, t_all_set, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, t_all_set, name)
-    __repr__ = _swig_repr
-
-    def iterator(self):
-        return _minhashing.t_all_set_iterator(self)
-    def __iter__(self):
-        return self.iterator()
-
-    def __nonzero__(self):
-        return _minhashing.t_all_set___nonzero__(self)
-
-    def __bool__(self):
-        return _minhashing.t_all_set___bool__(self)
-
-    def __len__(self):
-        return _minhashing.t_all_set___len__(self)
-
-    def pop(self):
-        return _minhashing.t_all_set_pop(self)
-
-    def __getslice__(self, i, j):
-        return _minhashing.t_all_set___getslice__(self, i, j)
-
-    def __setslice__(self, *args):
-        return _minhashing.t_all_set___setslice__(self, *args)
-
-    def __delslice__(self, i, j):
-        return _minhashing.t_all_set___delslice__(self, i, j)
-
-    def __delitem__(self, *args):
-        return _minhashing.t_all_set___delitem__(self, *args)
-
-    def __getitem__(self, *args):
-        return _minhashing.t_all_set___getitem__(self, *args)
-
-    def __setitem__(self, *args):
-        return _minhashing.t_all_set___setitem__(self, *args)
-
-    def append(self, x):
-        return _minhashing.t_all_set_append(self, x)
-
-    def empty(self):
-        return _minhashing.t_all_set_empty(self)
-
-    def size(self):
-        return _minhashing.t_all_set_size(self)
-
-    def clear(self):
-        return _minhashing.t_all_set_clear(self)
-
-    def swap(self, v):
-        return _minhashing.t_all_set_swap(self, v)
-
-    def get_allocator(self):
-        return _minhashing.t_all_set_get_allocator(self)
-
-    def begin(self):
-        return _minhashing.t_all_set_begin(self)
-
-    def end(self):
-        return _minhashing.t_all_set_end(self)
-
-    def rbegin(self):
-        return _minhashing.t_all_set_rbegin(self)
-
-    def rend(self):
-        return _minhashing.t_all_set_rend(self)
-
-    def pop_back(self):
-        return _minhashing.t_all_set_pop_back(self)
-
-    def erase(self, *args):
-        return _minhashing.t_all_set_erase(self, *args)
-
-    def __init__(self, *args):
-        this = _minhashing.new_t_all_set(*args)
-        try:
-            self.this.append(this)
-        except:
-            self.this = this
-
-    def push_back(self, x):
-        return _minhashing.t_all_set_push_back(self, x)
-
-    def front(self):
-        return _minhashing.t_all_set_front(self)
-
-    def back(self):
-        return _minhashing.t_all_set_back(self)
-
-    def assign(self, n, x):
-        return _minhashing.t_all_set_assign(self, n, x)
-
-    def resize(self, *args):
-        return _minhashing.t_all_set_resize(self, *args)
-
-    def insert(self, *args):
-        return _minhashing.t_all_set_insert(self, *args)
-
-    def reserve(self, n):
-        return _minhashing.t_all_set_reserve(self, n)
-
-    def capacity(self):
-        return _minhashing.t_all_set_capacity(self)
-    __swig_destroy__ = _minhashing.delete_t_all_set
-    __del__ = lambda self: None
-t_all_set_swigregister = _minhashing.t_all_set_swigregister
-t_all_set_swigregister(t_all_set)
-
-class t_hash_map(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, t_hash_map, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, t_hash_map, name)
-    __repr__ = _swig_repr
-
-    def iterator(self):
-        return _minhashing.t_hash_map_iterator(self)
-    def __iter__(self):
-        return self.iterator()
-
-    def __nonzero__(self):
-        return _minhashing.t_hash_map___nonzero__(self)
-
-    def __bool__(self):
-        return _minhashing.t_hash_map___bool__(self)
-
-    def __len__(self):
-        return _minhashing.t_hash_map___len__(self)
-    def __iter__(self):
-        return self.key_iterator()
-    def iterkeys(self):
-        return self.key_iterator()
-    def itervalues(self):
-        return self.value_iterator()
-    def iteritems(self):
-        return self.iterator()
-
-    def __getitem__(self, key):
-        return _minhashing.t_hash_map___getitem__(self, key)
-
-    def __delitem__(self, key):
-        return _minhashing.t_hash_map___delitem__(self, key)
-
-    def has_key(self, key):
-        return _minhashing.t_hash_map_has_key(self, key)
-
-    def keys(self):
-        return _minhashing.t_hash_map_keys(self)
-
-    def values(self):
-        return _minhashing.t_hash_map_values(self)
-
-    def items(self):
-        return _minhashing.t_hash_map_items(self)
-
-    def __contains__(self, key):
-        return _minhashing.t_hash_map___contains__(self, key)
-
-    def key_iterator(self):
-        return _minhashing.t_hash_map_key_iterator(self)
-
-    def value_iterator(self):
-        return _minhashing.t_hash_map_value_iterator(self)
-
-    def __setitem__(self, *args):
-        return _minhashing.t_hash_map___setitem__(self, *args)
-
-    def asdict(self):
-        return _minhashing.t_hash_map_asdict(self)
-
-    def __init__(self, *args):
-        this = _minhashing.new_t_hash_map(*args)
-        try:
-            self.this.append(this)
-        except:
-            self.this = this
-
-    def empty(self):
-        return _minhashing.t_hash_map_empty(self)
-
-    def size(self):
-        return _minhashing.t_hash_map_size(self)
-
-    def clear(self):
-        return _minhashing.t_hash_map_clear(self)
-
-    def swap(self, v):
-        return _minhashing.t_hash_map_swap(self, v)
-
-    def get_allocator(self):
-        return _minhashing.t_hash_map_get_allocator(self)
-
-    def begin(self):
-        return _minhashing.t_hash_map_begin(self)
-
-    def end(self):
-        return _minhashing.t_hash_map_end(self)
-
-    def rbegin(self):
-        return _minhashing.t_hash_map_rbegin(self)
-
-    def rend(self):
-        return _minhashing.t_hash_map_rend(self)
-
-    def count(self, x):
-        return _minhashing.t_hash_map_count(self, x)
-
-    def erase(self, *args):
-        return _minhashing.t_hash_map_erase(self, *args)
-
-    def find(self, x):
-        return _minhashing.t_hash_map_find(self, x)
-
-    def lower_bound(self, x):
-        return _minhashing.t_hash_map_lower_bound(self, x)
-
-    def upper_bound(self, x):
-        return _minhashing.t_hash_map_upper_bound(self, x)
-    __swig_destroy__ = _minhashing.delete_t_hash_map
-    __del__ = lambda self: None
-t_hash_map_swigregister = _minhashing.t_hash_map_swigregister
-t_hash_map_swigregister(t_hash_map)
-
-class t_sig_row(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, t_sig_row, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, t_sig_row, name)
-    __repr__ = _swig_repr
-
-    def iterator(self):
-        return _minhashing.t_sig_row_iterator(self)
-    def __iter__(self):
-        return self.iterator()
-
-    def __nonzero__(self):
-        return _minhashing.t_sig_row___nonzero__(self)
-
-    def __bool__(self):
-        return _minhashing.t_sig_row___bool__(self)
-
-    def __len__(self):
-        return _minhashing.t_sig_row___len__(self)
-
-    def pop(self):
-        return _minhashing.t_sig_row_pop(self)
-
-    def __getslice__(self, i, j):
-        return _minhashing.t_sig_row___getslice__(self, i, j)
-
-    def __setslice__(self, *args):
-        return _minhashing.t_sig_row___setslice__(self, *args)
-
-    def __delslice__(self, i, j):
-        return _minhashing.t_sig_row___delslice__(self, i, j)
-
-    def __delitem__(self, *args):
-        return _minhashing.t_sig_row___delitem__(self, *args)
-
-    def __getitem__(self, *args):
-        return _minhashing.t_sig_row___getitem__(self, *args)
-
-    def __setitem__(self, *args):
-        return _minhashing.t_sig_row___setitem__(self, *args)
-
-    def append(self, x):
-        return _minhashing.t_sig_row_append(self, x)
-
-    def empty(self):
-        return _minhashing.t_sig_row_empty(self)
-
-    def size(self):
-        return _minhashing.t_sig_row_size(self)
-
-    def clear(self):
-        return _minhashing.t_sig_row_clear(self)
-
-    def swap(self, v):
-        return _minhashing.t_sig_row_swap(self, v)
-
-    def get_allocator(self):
-        return _minhashing.t_sig_row_get_allocator(self)
-
-    def begin(self):
-        return _minhashing.t_sig_row_begin(self)
-
-    def end(self):
-        return _minhashing.t_sig_row_end(self)
-
-    def rbegin(self):
-        return _minhashing.t_sig_row_rbegin(self)
-
-    def rend(self):
-        return _minhashing.t_sig_row_rend(self)
-
-    def pop_back(self):
-        return _minhashing.t_sig_row_pop_back(self)
-
-    def erase(self, *args):
-        return _minhashing.t_sig_row_erase(self, *args)
-
-    def __init__(self, *args):
-        this = _minhashing.new_t_sig_row(*args)
-        try:
-            self.this.append(this)
-        except:
-            self.this = this
-
-    def push_back(self, x):
-        return _minhashing.t_sig_row_push_back(self, x)
-
-    def front(self):
-        return _minhashing.t_sig_row_front(self)
-
-    def back(self):
-        return _minhashing.t_sig_row_back(self)
-
-    def assign(self, n, x):
-        return _minhashing.t_sig_row_assign(self, n, x)
-
-    def resize(self, *args):
-        return _minhashing.t_sig_row_resize(self, *args)
-
-    def insert(self, *args):
-        return _minhashing.t_sig_row_insert(self, *args)
-
-    def reserve(self, n):
-        return _minhashing.t_sig_row_reserve(self, n)
-
-    def capacity(self):
-        return _minhashing.t_sig_row_capacity(self)
-    __swig_destroy__ = _minhashing.delete_t_sig_row
-    __del__ = lambda self: None
-t_sig_row_swigregister = _minhashing.t_sig_row_swigregister
-t_sig_row_swigregister(t_sig_row)
-
-class t_sig_matrix(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, t_sig_matrix, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, t_sig_matrix, name)
-    __repr__ = _swig_repr
-
-    def iterator(self):
-        return _minhashing.t_sig_matrix_iterator(self)
-    def __iter__(self):
-        return self.iterator()
-
-    def __nonzero__(self):
-        return _minhashing.t_sig_matrix___nonzero__(self)
-
-    def __bool__(self):
-        return _minhashing.t_sig_matrix___bool__(self)
-
-    def __len__(self):
-        return _minhashing.t_sig_matrix___len__(self)
-
-    def pop(self):
-        return _minhashing.t_sig_matrix_pop(self)
-
-    def __getslice__(self, i, j):
-        return _minhashing.t_sig_matrix___getslice__(self, i, j)
-
-    def __setslice__(self, *args):
-        return _minhashing.t_sig_matrix___setslice__(self, *args)
-
-    def __delslice__(self, i, j):
-        return _minhashing.t_sig_matrix___delslice__(self, i, j)
-
-    def __delitem__(self, *args):
-        return _minhashing.t_sig_matrix___delitem__(self, *args)
-
-    def __getitem__(self, *args):
-        return _minhashing.t_sig_matrix___getitem__(self, *args)
-
-    def __setitem__(self, *args):
-        return _minhashing.t_sig_matrix___setitem__(self, *args)
-
-    def append(self, x):
-        return _minhashing.t_sig_matrix_append(self, x)
-
-    def empty(self):
-        return _minhashing.t_sig_matrix_empty(self)
-
-    def size(self):
-        return _minhashing.t_sig_matrix_size(self)
-
-    def clear(self):
-        return _minhashing.t_sig_matrix_clear(self)
-
-    def swap(self, v):
-        return _minhashing.t_sig_matrix_swap(self, v)
-
-    def get_allocator(self):
-        return _minhashing.t_sig_matrix_get_allocator(self)
-
-    def begin(self):
-        return _minhashing.t_sig_matrix_begin(self)
-
-    def end(self):
-        return _minhashing.t_sig_matrix_end(self)
-
-    def rbegin(self):
-        return _minhashing.t_sig_matrix_rbegin(self)
-
-    def rend(self):
-        return _minhashing.t_sig_matrix_rend(self)
-
-    def pop_back(self):
-        return _minhashing.t_sig_matrix_pop_back(self)
-
-    def erase(self, *args):
-        return _minhashing.t_sig_matrix_erase(self, *args)
-
-    def __init__(self, *args):
-        this = _minhashing.new_t_sig_matrix(*args)
-        try:
-            self.this.append(this)
-        except:
-            self.this = this
-
-    def push_back(self, x):
-        return _minhashing.t_sig_matrix_push_back(self, x)
-
-    def front(self):
-        return _minhashing.t_sig_matrix_front(self)
-
-    def back(self):
-        return _minhashing.t_sig_matrix_back(self)
-
-    def assign(self, n, x):
-        return _minhashing.t_sig_matrix_assign(self, n, x)
-
-    def resize(self, *args):
-        return _minhashing.t_sig_matrix_resize(self, *args)
-
-    def insert(self, *args):
-        return _minhashing.t_sig_matrix_insert(self, *args)
-
-    def reserve(self, n):
-        return _minhashing.t_sig_matrix_reserve(self, n)
-
-    def capacity(self):
-        return _minhashing.t_sig_matrix_capacity(self)
-    __swig_destroy__ = _minhashing.delete_t_sig_matrix
-    __del__ = lambda self: None
-t_sig_matrix_swigregister = _minhashing.t_sig_matrix_swigregister
-t_sig_matrix_swigregister(t_sig_matrix)
-
-
-def construce_hash(arg1):
-    return _minhashing.construce_hash(arg1)
-construce_hash = _minhashing.construce_hash
-
-def min_hash(arg1, arg2):
-    return _minhashing.min_hash(arg1, arg2)
-min_hash = _minhashing.min_hash
-
-def generate_sig(arg1, arg2, arg3):
-    return _minhashing.generate_sig(arg1, arg2, arg3)
-generate_sig = _minhashing.generate_sig
 
 def read(arg1):
     return _minhashing.read(arg1)
 read = _minhashing.read
+
+def hash_func(arg1, arg2):
+    return _minhashing.hash_func(arg1, arg2)
+hash_func = _minhashing.hash_func
+
+def min_hashing(arg1, arg2):
+    return _minhashing.min_hashing(arg1, arg2)
+min_hashing = _minhashing.min_hashing
+
+def get_signature(arg1, arg2):
+    return _minhashing.get_signature(arg1, arg2)
+get_signature = _minhashing.get_signature
+
+def jaccard_similarity(*args):
+    return _minhashing.jaccard_similarity(*args)
+jaccard_similarity = _minhashing.jaccard_similarity
 # This file is compatible with both classic and new-style classes.
 
 

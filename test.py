@@ -4,10 +4,8 @@ import minhashing
 a = minhashing.read("/Users/wumengling/PycharmProjects/cpp_swig_test/dat_test")
 print(a)
 
-b = minhashing.t_set()
-for line in a:
-    for word in line:
-        b.add(word)
+sig_a = minhashing.get_signature(a, 10)
+print sig_a
 
-c = minhashing.generate_sig(a, b, 3)
-print(c)
+print minhashing.jaccard_similarity(sig_a)
+print minhashing.jaccard_similarity(a[0], a[1])

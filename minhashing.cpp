@@ -1,54 +1,71 @@
 #include "minhashing.h"
-#include <iostream>
 
-t_hash_map construce_hash(t_set whole_set) {
-    int total_element_num = whole_set.size();
-    t_hash_map res;
-    for (std::string element : whole_set) {
-        int val = std::rand() % total_element_num;
-        res.insert(std::pair<std::string, int> (element, val));
+all_doc read(std::string file_path) {
+    all_doc all_docs;
+    std::ifstream in_file(file_path);
+    std::string line;
+    while (std::getline(in_file, line)) {
+        doc one_doc;
+        std::istringstream in_string(line);
+        std::string one_word;
+        while (in_string >> one_word)
+            one_doc.push_back(one_word);
+        all_docs.push_back(one_doc);
     }
-    return res;
+    return all_docs;
 }
 
-std::string min_hash(t_set s, t_hash_map hm) {
-    std::string res;
-    int res_val = hm.size() + 1;
-    for (std::string e : s) {
-        if (hm[e] < res_val) {
-            res_val = hm[e];
-            res = e;
+int hash_func(std::string word, int random_int) {
+    std::hash<std::string> str_hash;
+    return (random_int * str_hash(word) + 1) % 11;
+}
+
+std::string min_hashing(doc one_doc, int random_int) {
+    std::string min_hashing_result = "";
+    int smallest_val = 11;
+    for (auto one_word : one_doc) {
+        int hash_val = hash_func(one_word, random_int);
+        if (hash_val < smallest_val) {
+            smallest_val = hash_val;
+            min_hashing_result = one_word;
         }
     }
-    return res;
+    return min_hashing_result;
 }
 
-t_sig_matrix generate_sig(t_all_set original_all_set, t_set whole_set, int sigature_length) {
-    t_sig_matrix res;
-    int n_signature = original_all_set.size();
-    for (int i = 0; i < sigature_length; i++) {
-        t_sig_row tmp_res;
-        t_hash_map hm = construce_hash(whole_set);
-        for (int j = 0; j < n_signature; j++) {
-            std::string sig_element = min_hash(original_all_set[j], hm);
-            tmp_res.push_back(sig_element);
-        }
-        res.push_back(tmp_res);
+all_doc get_signature(all_doc all_docs, int signature_size) {
+    all_doc sig_mat;
+    for (int i = 0; i < signature_size; i++) {
+        doc signature_pair;
+        for (auto d : all_docs)
+            signature_pair.push_back(min_hashing(d, i + 1));
+        sig_mat.push_back(signature_pair);
     }
-    return res;
+    return sig_mat;
 }
 
-t_all_set read(std::string fp){
-    t_all_set res;
-    std::ifstream data(fp);
-    std::string str;
-    while(std::getline(data, str)){
-        t_set tmp_res;
-        std::istringstream str_stream(str);
-        std::string e;
-        while(str_stream >> e)
-            tmp_res.insert(e);
-        res.push_back(tmp_res);
+float jaccard_similarity(all_doc sig_mat) {
+    float s = 0.0;
+    for (auto sig_pair : sig_mat) {
+        if (sig_pair[0] == sig_pair[1])
+            s += 1.0;
     }
-    return res;
+    return s / sig_mat.size();
+}
+
+float jaccard_similarity(doc d1, doc d2) {
+    float num_inter = 0.0;
+    float num_union = 0.0;
+    doc_set d2_set;
+    for (auto w : d2) {
+        d2_set.insert(w);
+        num_union += 1.0;
+    }
+    for (auto each_word : d1) {
+        if (d2_set.count(each_word) > 0)
+            num_inter += 1.0;
+        else
+            num_union += 1.0;
+    }
+    return num_inter / num_union;
 }
