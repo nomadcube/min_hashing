@@ -10777,30 +10777,6 @@ SWIGINTERN PyObject *doc_set_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObje
   return SWIG_Py_Void();
 }
 
-SWIGINTERN PyObject *_wrap_read(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
-  PyObject *resultobj = 0;
-  std::string arg1 ;
-  PyObject * obj0 = 0 ;
-  all_doc result;
-  
-  if (!PyArg_ParseTuple(args,(char *)"O:read",&obj0)) SWIG_fail;
-  {
-    std::string *ptr = (std::string *)0;
-    int res = SWIG_AsPtr_std_string(obj0, &ptr);
-    if (!SWIG_IsOK(res) || !ptr) {
-      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "read" "', argument " "1"" of type '" "std::string""'"); 
-    }
-    arg1 = *ptr;
-    if (SWIG_IsNewObj(res)) delete ptr;
-  }
-  result = read(arg1);
-  resultobj = swig::from(static_cast< std::vector<std::vector< std::string,std::allocator< std::string > >,std::allocator< std::vector< std::string,std::allocator< std::string > > > > >(result));
-  return resultobj;
-fail:
-  return NULL;
-}
-
-
 SWIGINTERN PyObject *_wrap_hash_func(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   std::string arg1 ;
@@ -10836,7 +10812,7 @@ fail:
 
 SWIGINTERN PyObject *_wrap_min_hashing(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
-  doc arg1 ;
+  std::string arg1 ;
   int arg2 ;
   int val2 ;
   int ecode2 = 0 ;
@@ -10846,10 +10822,10 @@ SWIGINTERN PyObject *_wrap_min_hashing(PyObject *SWIGUNUSEDPARM(self), PyObject 
   
   if (!PyArg_ParseTuple(args,(char *)"OO:min_hashing",&obj0,&obj1)) SWIG_fail;
   {
-    std::vector<std::string,std::allocator< std::string > > *ptr = (std::vector<std::string,std::allocator< std::string > > *)0;
-    int res = swig::asptr(obj0, &ptr);
+    std::string *ptr = (std::string *)0;
+    int res = SWIG_AsPtr_std_string(obj0, &ptr);
     if (!SWIG_IsOK(res) || !ptr) {
-      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "min_hashing" "', argument " "1"" of type '" "doc""'"); 
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "min_hashing" "', argument " "1"" of type '" "std::string""'"); 
     }
     arg1 = *ptr;
     if (SWIG_IsNewObj(res)) delete ptr;
@@ -10867,32 +10843,32 @@ fail:
 }
 
 
-SWIGINTERN PyObject *_wrap_get_signature(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+SWIGINTERN PyObject *_wrap_read_into_signature(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
-  all_doc arg1 ;
+  std::string arg1 ;
   int arg2 ;
   int val2 ;
   int ecode2 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
-  all_doc result;
+  signature_matrix result;
   
-  if (!PyArg_ParseTuple(args,(char *)"OO:get_signature",&obj0,&obj1)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OO:read_into_signature",&obj0,&obj1)) SWIG_fail;
   {
-    std::vector<std::vector< std::string,std::allocator< std::string > >,std::allocator< std::vector< std::string,std::allocator< std::string > > > > *ptr = (std::vector<std::vector< std::string,std::allocator< std::string > >,std::allocator< std::vector< std::string,std::allocator< std::string > > > > *)0;
-    int res = swig::asptr(obj0, &ptr);
+    std::string *ptr = (std::string *)0;
+    int res = SWIG_AsPtr_std_string(obj0, &ptr);
     if (!SWIG_IsOK(res) || !ptr) {
-      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "get_signature" "', argument " "1"" of type '" "all_doc""'"); 
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "read_into_signature" "', argument " "1"" of type '" "std::string""'"); 
     }
     arg1 = *ptr;
     if (SWIG_IsNewObj(res)) delete ptr;
   }
   ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "get_signature" "', argument " "2"" of type '" "int""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "read_into_signature" "', argument " "2"" of type '" "int""'");
   } 
   arg2 = static_cast< int >(val2);
-  result = get_signature(arg1,arg2);
+  result = read_into_signature(arg1,arg2);
   resultobj = swig::from(static_cast< std::vector<std::vector< std::string,std::allocator< std::string > >,std::allocator< std::vector< std::string,std::allocator< std::string > > > > >(result));
   return resultobj;
 fail:
@@ -10902,7 +10878,7 @@ fail:
 
 SWIGINTERN PyObject *_wrap_jaccard_similarity__SWIG_0(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
-  all_doc arg1 ;
+  signature_matrix arg1 ;
   PyObject * obj0 = 0 ;
   float result;
   
@@ -10911,13 +10887,37 @@ SWIGINTERN PyObject *_wrap_jaccard_similarity__SWIG_0(PyObject *SWIGUNUSEDPARM(s
     std::vector<std::vector< std::string,std::allocator< std::string > >,std::allocator< std::vector< std::string,std::allocator< std::string > > > > *ptr = (std::vector<std::vector< std::string,std::allocator< std::string > >,std::allocator< std::vector< std::string,std::allocator< std::string > > > > *)0;
     int res = swig::asptr(obj0, &ptr);
     if (!SWIG_IsOK(res) || !ptr) {
-      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "jaccard_similarity" "', argument " "1"" of type '" "all_doc""'"); 
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "jaccard_similarity" "', argument " "1"" of type '" "signature_matrix""'"); 
     }
     arg1 = *ptr;
     if (SWIG_IsNewObj(res)) delete ptr;
   }
   result = (float)jaccard_similarity(arg1);
   resultobj = SWIG_From_float(static_cast< float >(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_read(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  std::string arg1 ;
+  PyObject * obj0 = 0 ;
+  all_doc result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:read",&obj0)) SWIG_fail;
+  {
+    std::string *ptr = (std::string *)0;
+    int res = SWIG_AsPtr_std_string(obj0, &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "read" "', argument " "1"" of type '" "std::string""'"); 
+    }
+    arg1 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  result = read(arg1);
+  resultobj = swig::from(static_cast< std::vector<std::vector< std::string,std::allocator< std::string > >,std::allocator< std::vector< std::string,std::allocator< std::string > > > > >(result));
   return resultobj;
 fail:
   return NULL;
@@ -10993,7 +10993,7 @@ SWIGINTERN PyObject *_wrap_jaccard_similarity(PyObject *self, PyObject *args) {
 fail:
   SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'jaccard_similarity'.\n"
     "  Possible C/C++ prototypes are:\n"
-    "    jaccard_similarity(all_doc)\n"
+    "    jaccard_similarity(signature_matrix)\n"
     "    jaccard_similarity(doc,doc)\n");
   return 0;
 }
@@ -11114,10 +11114,10 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"doc_set_insert", _wrap_doc_set_insert, METH_VARARGS, NULL},
 	 { (char *)"delete_doc_set", _wrap_delete_doc_set, METH_VARARGS, NULL},
 	 { (char *)"doc_set_swigregister", doc_set_swigregister, METH_VARARGS, NULL},
-	 { (char *)"read", _wrap_read, METH_VARARGS, NULL},
 	 { (char *)"hash_func", _wrap_hash_func, METH_VARARGS, NULL},
 	 { (char *)"min_hashing", _wrap_min_hashing, METH_VARARGS, NULL},
-	 { (char *)"get_signature", _wrap_get_signature, METH_VARARGS, NULL},
+	 { (char *)"read_into_signature", _wrap_read_into_signature, METH_VARARGS, NULL},
+	 { (char *)"read", _wrap_read, METH_VARARGS, NULL},
 	 { (char *)"jaccard_similarity", _wrap_jaccard_similarity, METH_VARARGS, NULL},
 	 { NULL, NULL, 0, NULL }
 };
@@ -11136,8 +11136,8 @@ static swig_type_info _swigt__p_std__allocatorT_std__vectorT_std__string_std__al
 static swig_type_info _swigt__p_std__invalid_argument = {"_p_std__invalid_argument", "std::invalid_argument *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__lessT_std__string_t = {"_p_std__lessT_std__string_t", "std::less< std::string > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__setT_std__string_std__lessT_std__string_t_std__allocatorT_std__string_t_t = {"_p_std__setT_std__string_std__lessT_std__string_t_std__allocatorT_std__string_t_t", "std::set< std::string,std::less< std::string >,std::allocator< std::string > > *|doc_set *|std::set< std::string > *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__vectorT_std__string_std__allocatorT_std__string_t_t = {"_p_std__vectorT_std__string_std__allocatorT_std__string_t_t", "std::vector< std::string,std::allocator< std::string > > *|std::vector< std::string > *|doc *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_std__vectorT_std__vectorT_std__string_std__allocatorT_std__string_t_t_std__allocatorT_std__vectorT_std__string_std__allocatorT_std__string_t_t_t_t = {"_p_std__vectorT_std__vectorT_std__string_std__allocatorT_std__string_t_t_std__allocatorT_std__vectorT_std__string_std__allocatorT_std__string_t_t_t_t", "std::vector< std::vector< std::string > > *|std::vector< std::vector< std::string,std::allocator< std::string > >,std::allocator< std::vector< std::string,std::allocator< std::string > > > > *|std::vector< std::vector< std::string,std::allocator< std::string > > > *|all_doc *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_std__string_std__allocatorT_std__string_t_t = {"_p_std__vectorT_std__string_std__allocatorT_std__string_t_t", "signature *|std::vector< std::string,std::allocator< std::string > > *|std::vector< std::string > *|doc *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_std__vectorT_std__vectorT_std__string_std__allocatorT_std__string_t_t_std__allocatorT_std__vectorT_std__string_std__allocatorT_std__string_t_t_t_t = {"_p_std__vectorT_std__vectorT_std__string_std__allocatorT_std__string_t_t_std__allocatorT_std__vectorT_std__string_std__allocatorT_std__string_t_t_t_t", "std::vector< std::vector< std::string > > *|std::vector< std::vector< std::string,std::allocator< std::string > >,std::allocator< std::vector< std::string,std::allocator< std::string > > > > *|std::vector< std::vector< std::string,std::allocator< std::string > > > *|signature_matrix *|all_doc *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_swig__SwigPyIterator = {"_p_swig__SwigPyIterator", "swig::SwigPyIterator *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_value_type = {"_p_value_type", "value_type *", 0, 0, (void*)0, 0};
 

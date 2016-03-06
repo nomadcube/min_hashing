@@ -473,10 +473,6 @@ doc_set_swigregister = _minhashing.doc_set_swigregister
 doc_set_swigregister(doc_set)
 
 
-def read(arg1):
-    return _minhashing.read(arg1)
-read = _minhashing.read
-
 def hash_func(arg1, arg2):
     return _minhashing.hash_func(arg1, arg2)
 hash_func = _minhashing.hash_func
@@ -485,9 +481,13 @@ def min_hashing(arg1, arg2):
     return _minhashing.min_hashing(arg1, arg2)
 min_hashing = _minhashing.min_hashing
 
-def get_signature(arg1, arg2):
-    return _minhashing.get_signature(arg1, arg2)
-get_signature = _minhashing.get_signature
+def read_into_signature(arg1, arg2):
+    return _minhashing.read_into_signature(arg1, arg2)
+read_into_signature = _minhashing.read_into_signature
+
+def read(arg1):
+    return _minhashing.read(arg1)
+read = _minhashing.read
 
 def jaccard_similarity(*args):
     return _minhashing.jaccard_similarity(*args)
