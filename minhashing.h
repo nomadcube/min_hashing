@@ -19,6 +19,7 @@
 #include <set>
 #include <functional>
 #include <iostream>
+#include <random>
 
 typedef std::vector<std::string> doc;
 typedef std::vector<doc> all_doc;
@@ -29,13 +30,18 @@ typedef std::vector<signature> signature_matrix;
 
 
 
-int hash_func(std::string, int);
-std::string min_hashing(std::string, int);
+//构造哈希函数
+int hash_func(std::string, int ,int);
+//计算单个最小哈希值
+std::string min_hashing(std::string, int, int);
 
+//从文件中读入数据，并根据已构造的哈希函数和指定最小哈希序列长度，转成最小哈希签名储存
 signature_matrix read_into_signature(std::string, int);
 
+//用最小哈希签名估计Jaccard相似度
 float jaccard_similarity(signature_matrix);
 
+//从文件读数据入doc_vec
 all_doc read(std::string);
 float jaccard_similarity(doc, doc);
 #endif /* MINHASHING_H */

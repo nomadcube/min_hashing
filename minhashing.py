@@ -473,12 +473,12 @@ doc_set_swigregister = _minhashing.doc_set_swigregister
 doc_set_swigregister(doc_set)
 
 
-def hash_func(arg1, arg2):
-    return _minhashing.hash_func(arg1, arg2)
+def hash_func(arg1, arg2, arg3):
+    return _minhashing.hash_func(arg1, arg2, arg3)
 hash_func = _minhashing.hash_func
 
-def min_hashing(arg1, arg2):
-    return _minhashing.min_hashing(arg1, arg2)
+def min_hashing(arg1, arg2, arg3):
+    return _minhashing.min_hashing(arg1, arg2, arg3)
 min_hashing = _minhashing.min_hashing
 
 def read_into_signature(arg1, arg2):
