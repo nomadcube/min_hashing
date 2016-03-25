@@ -1,6 +1,6 @@
 import minhashing
 
-sig_size = 100
+sig_size = 10
 
 sig_a = minhashing.read_into_signature("/Users/wumengling/PycharmProjects/cpp_swig_test/dat_test.txt", sig_size)
 print(sig_a)
